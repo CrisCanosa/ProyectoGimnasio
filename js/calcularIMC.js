@@ -32,25 +32,18 @@ function calcularIMC() {
         }
     }
     document.getElementById('estado').value = estado
-    
+
     /*VALIDACIONES*/
     var fPeso = document.forms['miForm']['peso']
-    if (fPeso.value == '') {
-        alert('Introduce tu peso:')
-        document.getElementById('resultado').style.display = 'none'
-        return
-    }
     var fAltura = document.forms['miForm']['altura']
-    if (fAltura.value == '') {
-        alert('Introduce tu altura:')
+    if (fPeso.value == '' && fAltura.value == '') {
+        alert('Introduce tu peso o altura:')
         document.getElementById('resultado').style.display = 'none'
-        return
-    }
+    } 
 }
 
 function limpiar() {
     document.getElementById('miForm').reset()
     document.getElementById('resultado').style.display = 'none'
-
     console.log('Estoy ejecutando clear')
 }
