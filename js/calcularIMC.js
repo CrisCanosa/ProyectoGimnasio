@@ -17,25 +17,25 @@ function calcularIMC() {
             estado = "Delgadez severa";
             // estado = `Delgadez severa ${(altura * altura * 16 - peso).toFixed(1)} kilos`
         }
-        else if (imc >= 16 && imc < 17) {
+        else if (imc >= 16 && imc <= 16.99) {
             estado = "Delgadez moderada";
         }
-        else if (imc >= 17 && imc <= 18.5) {
+        else if (imc >= 17 && imc <= 18.49) {
             estado = "Delgadez aceptable";
         }
-        else if (imc >= 25 && imc < 30) {
+        else if (imc >= 18.50 && imc <= 24.99) {
             estado = "Peso normal";
         }
-        else if (imc >= 30 && imc <= 35.5) {
+        else if (imc >= 25 && imc <= 29.99) {
             estado = "Sobrepeso";
         }
-        else if (imc >= 35 && imc < 40) {
-            estado = "Obesidad tipo I";
+        else if (imc >= 30 && imc <= 34.99) {
+            estado = "Obeso Tipo I";
         }
-        else if (imc >= 40) {
+        else if (imc >= 35 && imc <= 40) {
             estado = "Obesidad tipo II";
         }
-        else if (imc >= 30 && imc < 40) {
+        else if (imc > 40) {
             estado = "Obesidad tipo III";
         }
     } else {
