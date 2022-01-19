@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="formulario" id="calcularImc" action="">
+        <label for="fecha">Introduce tu fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha">
+        <input type="button" value="Calcular" onClick="calcularCategoria()">
+        <p>Categorías por edades:</p>
+        <ul>
+            <li class="resultado">Micros</li>
+            <li class="resultado">Prebenjamines</li>
+            <li class="resultado">Benjamines</li>
+            <li class="resultado">Alevines</li>
+            <li class="resultado">Infantiles</li>
+            <li class="resultado">Juveniles</li>
+            <li class="resultado">Juniors</li>
+            <li class="resultado">Seniors</li>
+        </ul>
+
+    </form>
+</body>
+<script type="text/javascript" src="/js/categoria.js"></script>
+
+</html>
