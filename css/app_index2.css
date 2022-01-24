@@ -1,0 +1,46 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+  width: 39%;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 30%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="button"] {
+  width: 15%;
+  background-color: #4caf50;
+  color: white;
+  padding: 9px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ margin-left: 3%;
+}
+
+input[type="button"]:hover {
+  background-color: #45a049;
+}
+/* form {
+  display: table;
+}
+p.alinear {
+  display: table-row;
+}
+label {
+  display: table-cell;
+}
+input {
+  display: table-cell;
+} */

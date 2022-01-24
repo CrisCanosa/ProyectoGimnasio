@@ -2,26 +2,21 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Asociación AFUNDA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-        table, th, td {
-            border:1px solid black;
-            text-align:center;
-            width:25%
-        }
-</style>
-    </style>
+    <link rel="stylesheet" href="/css/app_index2.css">
+
+
 </head>
 
 <body>
 
     <div class="container">
-        <h2>Asociación Deportiva AFUNDA</h2>
+        <h2>Asociación Deportiva #AFUNDA</h2>
 
         <ul class="nav nav-tabs">
             <li class="active"><a href="#home">Inicio</a></li>
@@ -46,24 +41,30 @@
             </div>
             <div id="menu1" class="tab-pane fade">
                 <h3>Calculadora de IMC: Indice de Masa Corporal</h3>
-                <form name="formulario" id="miForm" action="">
-                    <label for="peso">Mi peso (kg):</label>
-                    <input type="number" id="peso" name="peso">
 
-                    <br><br>
+                <form name="formulario" id="miForm" action="">
+                    <label for="peso">Mi peso (kg): &nbsp</label>
+                    <input type="number" id="peso" name="peso">
+                    <br>
                     <label for="altura">Mi altura (cm):</label>
                     <input type="number" id="altura" name="altura">
-                    <br><br>
+                    <br>
+                    <input type="button" value="Calcular" onClick="calcularIMC()">
+                    <input type="button" value="Limpiar" onClick="limpiar()">
                 </form>
 
-                <input type="button" value="Calcular" onClick="calcularIMC()">
-                <button onClick="limpiar()">Limpiar</button>
-                <br><br>
-                <div id="resultado">
-                    <p>IMC: <input type="text" id="imc" disabled></p>
-                    <p>Clasificación: <input type="text" id="estado" disabled></p>
+                <div id="resultado2">
+                    <p>
+                        <label for="imc" name="imc">IMC:</label>
+                        <input type="text" id="imc" disabled>
+                    </p>
+                    <p>
+                        <label for="estado" name="estado">Clasificación:</label>
+                        <input type="text" id="estado" disabled>
+                    </p>
                 </div>
 
+                <br>
                 <table>
                     <tr>
                         <th>Clasificacion</th>
@@ -71,7 +72,8 @@
                     </tr>
                     <tr>
                         <td>Delgadez severa</td>
-                        <td>< 16 </td>
+                        <td>
+                            < 16 </td>
                     </tr>
                     <tr>
                         <td>Delgadez moderada</td>
@@ -102,6 +104,7 @@
                         <td> > 40</td>
                     </tr>
                 </table>
+
             </div>
             <div id="menu2" class="tab-pane fade">
                 <form name="formulario" id="calcularImc" action="">

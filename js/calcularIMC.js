@@ -1,4 +1,4 @@
-document.getElementById('resultado').style.display = 'none'
+document.getElementById('resultado2').style.display = 'none'
 
 function calcularIMC() {
     var peso, altura, imc, estado
@@ -9,7 +9,7 @@ function calcularIMC() {
     imc = peso / (altura * altura)
     //enviamos el resultado a la caja correspondiente y lo reducimos a 2 decimales
     document.getElementById('imc').value = imc.toFixed(2)
-    document.getElementById('resultado').style.display = 'block'
+    document.getElementById('resultado2').style.display = 'block'
 
     if (peso != '' && altura != '') {
         if (imc <= 16) {
@@ -38,12 +38,12 @@ function calcularIMC() {
     var fAltura = document.forms['miForm']['altura']
     if (fPeso.value == '' && fAltura.value == '') {
         alert('Introduce tu peso o altura:')
-        document.getElementById('resultado').style.display = 'none'
+        document.getElementById('resultado2').style.display = 'none'
     } 
 }
 
 function limpiar() {
     document.getElementById('miForm').reset()
-    document.getElementById('resultado').style.display = 'none'
+    document.getElementById('resultado2').style.display = 'none'
     console.log('Estoy ejecutando clear')
 }
