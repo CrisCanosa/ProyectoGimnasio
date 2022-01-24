@@ -11,6 +11,11 @@ function calcularCategoria() {
     edad = edad / (1000 * 60 * 60 * 24 * 365)
     console.log(edad)
 
+    if(fechaNacimiento > hoy) {
+        alert("La fecha de nacimiento no puede ser superior a la fecha actual")
+        resultado[i].style.fontWeight = 'normal'
+    }
+    
     for (var i = 0; i < resultado.length; i++) {
         resultado[i].style.fontWeight = 'normal'
     }
@@ -29,7 +34,7 @@ function calcularCategoria() {
         resultado[5].style.fontWeight = 'bold'
     } else if (edad > 17 && edad <= 19) {
         resultado[6].style.fontWeight = 'bold'
-    } else if (edad >= 19) {
+    } else if (edad > 19) {
         resultado[7].style.fontWeight = 'bold'
     }
 }
