@@ -15,19 +15,19 @@ function calcularCategoria() {
         resultado[i].style.fontWeight = 'normal'
     }
 
-    if (edad <= 6) {
+    if (edad <= 7) {
         resultado[0].style.fontWeight = 'bold'
-    } else if (edad >= 7 && edad < 9) {
+    } else if (edad > 7 && edad <= 9) {
         resultado[1].style.fontWeight = 'bold'
-    } else if (edad >= 9 && edad < 11) {
+    } else if (edad > 9 && edad <= 11) {
         resultado[2].style.fontWeight = 'bold'
-    } else if (edad >= 11 && edad < 13) {
+    } else if (edad > 11 && edad <= 13) {
         resultado[3].style.fontWeight = 'bold'
-    } else if (edad >= 13 && edad < 15) {
+    } else if (edad > 13 && edad <= 15) {
         resultado[4].style.fontWeight = 'bold'
-    } else if (edad >= 15 && edad < 17) {
+    } else if (edad > 15 && edad <= 17) {
         resultado[5].style.fontWeight = 'bold'
-    } else if (edad >= 17 && edad < 19) {
+    } else if (edad > 17 && edad <= 19) {
         resultado[6].style.fontWeight = 'bold'
     } else if (edad >= 19) {
         resultado[7].style.fontWeight = 'bold'

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Asociación Deportiva AFUNDA</h2>
+        <p>Haga clic en las pestañas para mostrar la pestaña activa y anterior .</p>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#home">Inicio</a></li>
+            <li><a href="#menu1">Calculadora de IMC</a></li>
+            <li><a href="#menu2">Calculadora Categoria</a></li>
+            <li><a href="#menu3">Calculadora FCM</a></li>
+            <li><a href="#menu4">Horario</a></li>
+            <li><a href="#menu5">WorkInProgress</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h1>AFUNDA</h1>
+                <p>Bievenidos</p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h1>Calculadora de IMC: Indice de Masa Corporal</h1>
+                <form name="formulario" id="miForm" action="">
+                    <label for="peso">Mi peso (kg):</label>
+                    <input type="number" id="peso" name="peso">
+
+                    <br><br>
+                    <label for="altura">Mi altura (cm):</label>
+                    <input type="number" id="altura" name="altura">
+                    <br><br>
+                </form>
+
+                <input type="button" value="Calcular" onClick="calcularIMC()">
+                <button onClick="limpiar()">Limpiar</button>
+                <div id="resultado">
+                    <p>IMC: <input type="text" id="imc" disabled></p>
+                    <p>Clasificación: <input type="text" id="estado" disabled></p>
+                </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <form name="formulario" id="calcularImc" action="">
+                    <label for="fecha">Introduce tu fecha de nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha">
+                    <input type="button" value="Calcular" onClick="calcularCategoria()">
+                    <p>Categorías por edades:</p>
+                    <ul>
+                        <li class="resultado">Micros</li>
+                        <li class="resultado">Prebenjamines</li>
+                        <li class="resultado">Benjamines</li>
+                        <li class="resultado">Alevines</li>
+                        <li class="resultado">Infantiles</li>
+                        <li class="resultado">Juveniles</li>
+                        <li class="resultado">Juniors</li>
+                        <li class="resultado">Seniors</li>
+                    </ul>
+                </form>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+
+            </div>
+            <div id="menu4" class="tab-pane fade">
+
+            </div>
+            <div id="menu5" class="tab-pane fade">
+
+            </div>
+        </div>
+        <hr>
+       
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".nav-tabs a").click(function () {
+                $(this).tab('show');
+            });
+            $('.nav-tabs a').on('shown.bs.tab', function (event) {
+                var x = $(event.target).text();         // active tab
+                var y = $(event.relatedTarget).text();  // previous tab
+                $(".act span").text(x);
+                $(".prev span").text(y);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="/js/calcularIMC.js"></script>
+    <script type="text/javascript" src="/js/categoria.js"></script>
+</body>
+
+</html>
