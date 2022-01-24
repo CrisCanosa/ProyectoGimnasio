@@ -62,7 +62,23 @@
         </form>
     </div>
     <div id="calculadoraFCM" class="tabcontent">
+        <h1>Calculadora de FCM: Frecuencia Cardíaca Máxima</h1>
+        <form name="formulario" id="miForm" action="">
+            <label for="edad">Mi edad (años):</label>
+            <input type="number" id="edad" name="edad" placeholder="p. ej: 18"> 
 
+            <br><br>
+            <label for="sexo">Mi género (masculino, femenino):</label>
+            <input type="text" id="sexo" name="sexo" placeholder="p. ej: femenino">
+            <br><br>
+        </form>
+
+        <input type="button" value="Calcular" onClick="calcularFCM()">
+        <button onClick="limpiar()">Limpiar</button>
+        <div id="resultado">
+            <p>FCM: <input type="text" id="fcm" disabled></p>
+            <p>Clasificación: <input type="text" id="estado" disabled></p>
+        </div>
     </div>
     <div id="horario" class="tabcontent">
 
@@ -87,6 +103,7 @@
     </script>
     <script type="text/javascript" src="/js/calcularIMC.js"></script>
     <script type="text/javascript" src="/js/categoria.js"></script>
+    <script type="text/javascript" src="/js/calcularFCM.js"></script>
 </body>
 
 </html>
