@@ -1,15 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <base href="<%=basePath%>">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-    <title>My JSP 'index.jsp' starting page</title>
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="This is my page">
+<body>
     <style>
         table {
             border-collapse: collapse;
@@ -49,34 +48,37 @@
     </script>
 
 
-</head>
+    </head>
 
-<body>
-    <label for="nomb"> Nombre: </label>
-    <input id="nomb" name="nomb" type="text"><br>
+    <body>
+        <label for="nomb"> Nombre: </label>
+        <input id="nomb" name="nomb" type="text"><br>
 
-    <label for="cat"> Categoria:</label>
-    <input id="cat" name="cat" type="text"><br>
+        <label for="cat"> Categoria:</label>
+        <input id="cat" name="cat" type="text"><br>
 
-    <label for="precio">Precio: </label>
-    <input id="precio" name="precio" type="text"><br>
+        <label for="precio">Precio: </label>
+        <input id="precio" name="precio" type="text"><br>
 
-    <label for="stock">Stock: </label>
-    <input id="stock" name="stock" type="text"><br>
-    
-    <button id="btn_guardar" onclick="guardar()">Guardar</button><br><br>
+        <label for="stock">Stock: </label>
+        <input id="stock" name="stock" type="text"><br>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Categoria</th>
-                <th>Precio</th>
-                <th>Stock</th>
-            </tr>
-        </thead>
-        <tbody id="tabla">
+        <button id="btn_guardar" onclick="guardar()">Guardar</button><br><br>
 
-        </tbody>
-    </table>
-</body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+
+            </tbody>
+        </table>
+
+    </body>
+
+</html>
