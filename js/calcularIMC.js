@@ -14,6 +14,7 @@ function calcularIMC() {
     if (peso != '' && altura != '') {
         if (imc <= 16) {
             estado = 'Delgadez severa'
+
             // estado = `Delgadez severa ${(altura * altura * 16 - peso).toFixed(1)} kilos`
         } else if (imc >= 16 && imc <= 16.99) {
             estado = 'Delgadez moderada'
@@ -39,7 +40,7 @@ function calcularIMC() {
     if (fPeso.value == '' && fAltura.value == '') {
         alert('Introduce tu peso o altura:')
         document.getElementById('resultado2').style.display = 'none'
-    } 
+    }
 }
 
 function limpiar() {
