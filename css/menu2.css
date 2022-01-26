@@ -11,6 +11,6 @@ input[type='button'].boton {
 input[type='button'].boton:hover {
     background-color: #45a049;
 }
-* {
+/* * {
     font-size: 18px;
-}
+} */

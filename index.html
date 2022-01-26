@@ -138,40 +138,21 @@
 
             </div>
             <div id="menu5" class="tab-pane fade">
+                <h3>Comentarios</h3>
                 <form action="">
-                    <label for="nomb"> Nombre: </label>
-                    <input id="nomb" name="nomb" type="text"><br>
+                    <label>Nombre:</label>
+                    <input type="text" id="nombre" /><br><br>
 
-                    <label for="cat"> Categoria:</label>
-                    <input id="cat" name="cat" type="text"><br>
+                    <label>Comentarios</label><br><br>
+                    <textarea id="comentario" "></textarea><br>
 
-                    <label for="precio">Precio: </label>
-                    <input id="precio" name="precio" type="text"><br>
-
-                    <label for="stock">Stock: </label>
-                    <input id="stock" name="stock" type="text"><br>
-
-                   
+                    <button type=" button" onclick="postComment();">Send</button>
                 </form>
-                <button id="btn_guardar" onclick="guardar()">Guardar</button><br><br>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Categoria</th>
-                            <th>Precio</th>
-                            <th>Stock</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabla">
-
-                    </tbody>
-                </table>
+                <div >
+                    <div">Comentarios</div>
+                    <div id="resultado"></div>
+                </div>
             </div>
-        </div>
-        <hr>
-
     </div>
 
     <script>
@@ -190,6 +171,7 @@
     <script type="text/javascript" src="/js/calcularIMC.js"></script>
     <script type="text/javascript" src="/js/categoria.js"></script>
     <script type="text/javascript" src="/js/workInProgress.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
