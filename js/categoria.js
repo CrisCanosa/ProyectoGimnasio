@@ -11,10 +11,10 @@ function calcularCategoria() {
     edad = edad / (1000 * 60 * 60 * 24 * 365)
     // console.log(edad)
 
-    // if (fechaNacimiento > hoy) {
-    //     alert('La fecha de nacimiento no puede ser superior a la fecha actual')
-    //     resultado[i].style.fontWeight = 'normal'
-    // }
+    if (fechaNacimiento > hoy) {
+        alert('La fecha de nacimiento no puede ser superior a la fecha actual')
+        resultado[i].style.fontWeight = 'normal'
+    }
     
     for (var i = 0; i < resultado.length; i++) {
         resultado[i].style.fontWeight = 'normal'
