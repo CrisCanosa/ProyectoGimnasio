@@ -110,7 +110,7 @@ function limpiar() {
     
     document.getElementById('miForm').reset()
     document.getElementById('resultadoIMC').style.display = 'none'
-    document.getElementById('quitarPintado').style.fontWeight = 'normal'
+    
     for (var i = 0; i < clasificacion.length; i++) {
         clasificacion[i].style.fontWeight = 'normal'
     }
