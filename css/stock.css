@@ -1,0 +1,8 @@
+tr:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+table#tablaStock{
+  width: 500px;
+
+}

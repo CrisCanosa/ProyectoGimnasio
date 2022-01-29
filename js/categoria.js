@@ -1,7 +1,7 @@
 function calcularCategoria() {
     let fecha = document.getElementById('fecha')
     // console.log(fecha.value)
-    var resultado = document.getElementsByClassName('resultado')
+    var resultadoCategoria = document.getElementsByClassName('resultadoCategoria')
     let array = fecha.value.split('-')
     // console.log(array)
     let hoy = new Date()
@@ -13,28 +13,28 @@ function calcularCategoria() {
 
     if (fechaNacimiento > hoy) {
         alert('La fecha de nacimiento no puede ser superior a la fecha actual')
-        resultado[i].style.fontWeight = 'normal'
+        resultadoCategoria.style.fontWeight = 'normal'
     }
     
-    for (var i = 0; i < resultado.length; i++) {
-        resultado[i].style.fontWeight = 'normal'
+    for (var i = 0; i < resultadoCategoria.length; i++) {
+        resultadoCategoria[i].style.fontWeight = 'normal'
     }
 
     if (edad <= 7) {
-        resultado[0].style.fontWeight = 'bold'
+        resultadoCategoria[0].style.fontWeight = 'bold'
     } else if (edad > 7 && edad <= 9) {
-        resultado[1].style.fontWeight = 'bold'
+        resultadoCategoria[1].style.fontWeight = 'bold'
     } else if (edad > 9 && edad <= 11) {
-        resultado[2].style.fontWeight = 'bold'
+        resultadoCategoria[2].style.fontWeight = 'bold'
     } else if (edad > 11 && edad <= 13) {
-        resultado[3].style.fontWeight = 'bold'
+        resultadoCategoria[3].style.fontWeight = 'bold'
     } else if (edad > 13 && edad <= 15) {
-        resultado[4].style.fontWeight = 'bold'
+        resultadoCategoria[4].style.fontWeight = 'bold'
     } else if (edad > 15 && edad <= 17) {
-        resultado[5].style.fontWeight = 'bold'
+        resultadoCategoria[5].style.fontWeight = 'bold'
     } else if (edad > 17 && edad <= 19) {
-        resultado[6].style.fontWeight = 'bold'
+        resultadoCategoria[6].style.fontWeight = 'bold'
     } else if (edad > 19) {
-        resultado[7].style.fontWeight = 'bold'
+        resultadoCategoria[7].style.fontWeight = 'bold'
     }
 }

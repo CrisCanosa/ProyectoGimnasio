@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/menu1.css">
     <link rel="stylesheet" href="/css/menu2.css">
-
+    <link rel="stylesheet" href="/css/stock.css">
 </head>
 
 <body>
@@ -46,19 +46,20 @@
                         <form name="formulario" id="miForm" action="">
                             <p class="bold">
                                 <label for="peso">Mi peso (kg): &nbsp</label>
-                                <input type="number" id="peso" name="peso">
+                                <input type="text" id="peso" name="peso">
                             </p>
 
                             <p class="bold">
                                 <label for="altura">Mi altura (cm):</label>
-                                <input type="number" id="altura" name="altura">
+                                <input type="text" id="altura" name="altura">
                             </p>
 
                             <input type="button" value="Calcular" class="calcular" onClick="calcularIMC()">
                             <input type="button" value="Limpiar" class="limpiar" onClick="limpiar()">
+
                         </form>
                     </div>
-                    <div id="resultado2">
+                    <div id="resultadoIMC">
                         <p>
                             <label for="imc" class="calculo" name="imc">IMC:</label>
                             <input type="text" class="color" id="imc" disabled>
@@ -69,49 +70,22 @@
                         </p>
                     </div>
                 </div>
+                <p>Clasificación IMC:</p>
+                <ul>
 
-                <br>
-                <table>
-                    <tr>
-                        <th>Clasificacion</th>
-                        <th>Valores</th>
-                    </tr>
-                    <tr>
-                        <td>Delgadez severa</td>
-                        <td>
-                            < 16 </td>
-                    </tr>
-                    <tr>
-                        <td>Delgadez moderada</td>
-                        <td>16 - 16.9</td>
-                    </tr>
-                    <tr>
-                        <td>Delgadez aceptable</td>
-                        <td>17 - 18.4</td>
-                    </tr>
-                    <tr>
-                        <td>Normal</td>
-                        <td>18.5 - 24.9</td>
-                    </tr>
-                    <tr>
-                        <td>Sobrepeso</td>
-                        <td>25 - 29.9</td>
-                    </tr>
-                    <tr>
-                        <td>Obesidad Grado I</td>
-                        <td>30 - 34.9</td>
-                    </tr>
-                    <tr>
-                        <td>Obesidad Grado II</td>
-                        <td>35 - 39</td>
-                    </tr>
-                    <tr>
-                        <td>Obesidad Grado III</td>
-                        <td> > 40</td>
-                    </tr>
-                </table>
+                    <li id="quitarPintado" class="clasificacion">Delgadez severa (< 16)</li>
+                    <li id="quitarPintado" class="clasificacion">Delgadez moderada (16 - 16.9)</li>
+                    <li id="quitarPintado" class="clasificacion">Delgadez aceptable (17 - 18.4)</li>
+                    <li id="quitarPintado" class="clasificacion">Normal (18.5 - 24.9)</li>
+                    <li id="quitarPintado" class="clasificacion">Sobrepeso (25 - 29.9)</li>
+                    <li id="quitarPintado" class="clasificacion">Obesidad Grado I (30 - 34.9)</li>
+                    <li id="quitarPintado" class="clasificacion">Obesidad Grado II (35 - 39)</li>
+                    <li id="quitarPintado" class="clasificacion">Obesidad Grado III (> 40)</li>
+
+                </ul>
 
             </div>
+
             <div id="menu2" class="tab-pane fade">
                 <h3>Calculadora de Categoria</h3>
                 <form name="formulario" id="calcularImc" action="">
@@ -120,17 +94,18 @@
                     <input type="button" class="boton" value="Calcular" onClick="calcularCategoria()">
                     <p>Categorías por edades:</p>
                     <ul>
-                        <li class="resultado">Micros (Menores de 7 años)</li>
-                        <li class="resultado">Prebenjamines (8-9 años)</li>
-                        <li class="resultado">Benjamines (10-11 años)</li>
-                        <li class="resultado">Alevines (12-13 años)</li>
-                        <li class="resultado">Infantiles (14-15 años)</li>
-                        <li class="resultado">Juveniles (16-17 años)</li>
-                        <li class="resultado">Juniors (18-19 años)</li>
-                        <li class="resultado">Seniors (Mayores de 20 años)</li>
+                        <li class="resultadoCategoria">Micros (Menores de 7 años)</li>
+                        <li class="resultadoCategoria">Prebenjamines (8-9 años)</li>
+                        <li class="resultadoCategoria">Benjamines (10-11 años)</li>
+                        <li class="resultadoCategoria">Alevines (12-13 años)</li>
+                        <li class="resultadoCategoria">Infantiles (14-15 años)</li>
+                        <li class="resultadoCategoria">Juveniles (16-17 años)</li>
+                        <li class="resultadoCategoria">Juniors (18-19 años)</li>
+                        <li class="resultadoCategoria">Seniors (Mayores de 20 años)</li>
                     </ul>
                 </form>
             </div>
+
             <div id="menu3" class="tab-pane fade">
 
             </div>
@@ -138,40 +113,96 @@
 
             </div>
             <div id="menu5" class="tab-pane fade">
-                <h3>Comentarios</h3>
-                <form action="">
-                    <label>Nombre:</label>
-                    <input type="text" id="nombre" /><br><br>
+                <div class="container2">
+                    <h1>Stock</h1>
 
-                    <label>Comentarios</label><br><br>
-                    <textarea id="comentario" "></textarea><br>
+                    <p>
+                        <label for="codigo">Código:</label>
+                        <input type="text" name="codigo" id="codigo">
+                    </p>
+                    <p>
+                        <label for="familia">Familia:</label>
+                        <input type="text" name="familia" id="familia">
+                    </p>
+                    <p>
+                        <label for="ubicacion">Ubicación:<label>
+                                <input type="text" name="ubicacion" id="ubicacion">
+                    </p>
+                    <p>
+                        <label for="unidad">Unidad:</label>
+                        <input type="text" name="unidad" id="unidad">
+                    </p>
+                    <p>
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="text" name="cantidad" id="cantidad">
+                    </p>
+                    <p>
+                        <label for="precio">Precio:</label>
+                        <input type="text" name="precio" id="precio">
+                    </p>
 
-                    <button type=" button" onclick="postComment();">Send</button>
-                </form>
-                <div >
-                    <div">Comentarios</div>
-                    <div id="resultado"></div>
+
+                    <button onclick="agregarHtml();">Añadir</button>
+                    <button onclick="editarFila();">Editar</button>
+                    <button onclick="borrarFila();">Borrar</button>
+
+                    <table id="tablaStock" border="1">
+                        <tr>
+                            <th>Código</th>
+                            <th>Familia</th>
+                            <th>Ubicación</th>
+                            <th>Unidad</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                        <tr>
+                            <td>0497</td>
+                            <td>Cinta de correr</td>
+                            <td>Almacén</td>
+                            <td>NordicTrack T10.0</td>
+                            <td>1</td>
+                            <td>939,00€</td>
+                        </tr>
+                        <tr>
+                            <td>0497</td>
+                            <td>Cinta de correr</td>
+                            <td>Almacén</td>
+                            <td>Cadenza Fitness T50 Cinta de Correr Pantalla Táctil 15,6" - 22km/h</td>
+                            <td>2</td>
+                            <td>899,00€</td>
+                        </tr>
+                        <tr>
+                            <td>0497</td>
+                            <td>Bicicletas Elípticas</td>
+                            <td>Almacén</td>
+                            <td>NordicTrack C7.5</td>
+                            <td>1</td>
+                            <td>999,00€</td>
+                        </tr>
+                    </table>
+
                 </div>
             </div>
-    </div>
+        </div>
 
-    <script>
-        $(document).ready(function () {
-            $(".nav-tabs a").click(function () {
-                $(this).tab('show');
+        <script>
+            $(document).ready(function () {
+                $(".nav-tabs a").click(function () {
+                    $(this).tab('show');
+                });
+                $('.nav-tabs a').on('shown.bs.tab', function (event) {
+                    var x = $(event.target).text();         // active tab
+                    var y = $(event.relatedTarget).text();  // previous tab
+                    $(".act span").text(x);
+                    $(".prev span").text(y);
+                });
             });
-            $('.nav-tabs a').on('shown.bs.tab', function (event) {
-                var x = $(event.target).text();         // active tab
-                var y = $(event.relatedTarget).text();  // previous tab
-                $(".act span").text(x);
-                $(".prev span").text(y);
-            });
-        });
-    </script>
-    <script type="text/javascript" src="/js/calcularIMC.js"></script>
-    <script type="text/javascript" src="/js/categoria.js"></script>
-    <script type="text/javascript" src="/js/workInProgress.js"></script>
-    <script src="js/script.js"></script>
+        </script>
+
+        <script type="text/javascript" src="/js/calcularIMC.js"></script>
+        <script type="text/javascript" src="/js/categoria.js"></script>
+        <script type="text/javascript" src="/js/stock.js"></script>
+
 </body>
 
 </html>
