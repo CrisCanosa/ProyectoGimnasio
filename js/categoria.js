@@ -13,7 +13,6 @@ function calcularCategoria() {
 
     if (fechaNacimiento > hoy) {
         alert('La fecha de nacimiento no puede ser superior a la fecha actual')
-        resultadoCategoria.style.fontWeight = 'normal'
     }
     
     for (var i = 0; i < resultadoCategoria.length; i++) {

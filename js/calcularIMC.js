@@ -62,7 +62,7 @@ function calcularIMC() {
     //enviamos el resultado a la caja correspondiente y lo reducimos a 2 decimales
     document.getElementById('imc').value = imc.toFixed(2)
     document.getElementById('resultadoIMC').style.display = 'block'
-    
+
     for (var i = 0; i < clasificacion.length; i++) {
         clasificacion[i].style.fontWeight = 'normal'
     }
@@ -111,5 +111,8 @@ function limpiar() {
     document.getElementById('miForm').reset()
     document.getElementById('resultadoIMC').style.display = 'none'
     document.getElementById('quitarPintado').style.fontWeight = 'normal'
+    for (var i = 0; i < clasificacion.length; i++) {
+        clasificacion[i].style.fontWeight = 'normal'
+    }
     console.log('Estoy ejecutando clear')
 }
