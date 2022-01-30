@@ -49,7 +49,7 @@ function agregarHtml() {
             familia = document.getElementById('familia').value,
             ubicacion = document.getElementById('ubicacion').value,
             unidad = document.getElementById('unidad').value,
-            cantidad = document.getElementById('cantidad').value,
+            cantidad = document.getElementById('cantidad').value
            
 
         fila1.innerHTML = codigo
