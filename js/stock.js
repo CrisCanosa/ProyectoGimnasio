@@ -9,7 +9,7 @@ function comprobarInputVacio() {
         ubicacion = document.getElementById('ubicacion').value,
         unidad = document.getElementById('codigo').value,
         cantidad = document.getElementById('familia').value,
-        precio = document.getElementById('ubicacion').value
+        
 
     if (codigo === '') {
         alert('El Codigo no puede estar vacio')
@@ -43,21 +43,21 @@ function agregarHtml() {
             fila3 = filaNueva.insertCell(2),
             fila4 = filaNueva.insertCell(3),
             fila5 = filaNueva.insertCell(4),
-            fila6 = filaNueva.insertCell(5),
+            
             
             codigo = document.getElementById('codigo').value,
             familia = document.getElementById('familia').value,
             ubicacion = document.getElementById('ubicacion').value,
             unidad = document.getElementById('unidad').value,
             cantidad = document.getElementById('cantidad').value,
-            precio = document.getElementById('precio').value
+           
 
         fila1.innerHTML = codigo
         fila2.innerHTML = familia
         fila3.innerHTML = ubicacion
         fila4.innerHTML = unidad
         fila5.innerHTML = cantidad
-        fila6.innerHTML = precio
+       
 
         // llamar a la función para establecer el evento en la nueva fila
         selecionarFila()
@@ -75,7 +75,7 @@ function selecionarFila() {
             document.getElementById('ubicacion').value = this.cells[2].innerHTML
             document.getElementById('unidad').value = this.cells[3].innerHTML
             document.getElementById('cantidad').value = this.cells[4].innerHTML
-            document.getElementById('precio').value = this.cells[5].innerHTML
+            
         }
     }
 }
@@ -87,14 +87,14 @@ function editarFila() {
         ubicacion = document.getElementById('ubicacion').value,
         unidad = document.getElementById('unidad').value,
         cantidad = document.getElementById('cantidad').value,
-        precio = document.getElementById('precio').value
+        
     if (!comprobarInputVacio()) {
         table.rows[rIndex].cells[0].innerHTML = codigo
         table.rows[rIndex].cells[1].innerHTML = familia
         table.rows[rIndex].cells[2].innerHTML = ubicacion
         table.rows[rIndex].cells[3].innerHTML = unidad
         table.rows[rIndex].cells[4].innerHTML = cantidad
-        table.rows[rIndex].cells[5].innerHTML = precio
+        
     }
 }
 
@@ -108,5 +108,5 @@ function borrarFila() {
     document.getElementById('ubicacion').value = ''
     document.getElementById('unidad').value = ''
     document.getElementById('cantidad').value = ''
-    document.getElementById('precio').value = ''
+    
 }
