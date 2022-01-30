@@ -158,3 +158,8 @@ button.primaryContained:hover {
 	transition: all 0.5s;
 	margin-top: 15px;
 }
+
+tr:hover {
+	background-color: #eee;
+	cursor: pointer;
+  }
