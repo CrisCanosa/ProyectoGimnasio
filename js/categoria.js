@@ -11,20 +11,13 @@ function calcularCategoria() {
     edad = edad / (1000 * 60 * 60 * 24 * 365)
     // console.log(edad)
 
-    if (fechaNacimiento > hoy) {
-        Swal.fire({
-            title: 'La fecha de nacimiento no puede ser superior a la fecha actual',
-            text: 'Por favor, inténtalo de nuevo',
-            icon: 'warning',
-            confirmButtonText: 'Reintentar',
-        })
-
-    }
-    
-    
     for (var i = 0; i < resultadoCategoria.length; i++) {
         resultadoCategoria[i].style.fontWeight = 'normal'
     }
+
+ 
+    
+   
 
     if (edad <= 7) {
         resultadoCategoria[0].style.fontWeight = 'bold'
@@ -43,4 +36,18 @@ function calcularCategoria() {
     } else if (edad > 19) {
         resultadoCategoria[7].style.fontWeight = 'bold'
     }
+
+    if (fechaNacimiento > hoy) {
+        
+        Swal.fire({
+            title: 'La fecha de nacimiento no puede ser superior a la fecha actual',
+            text: 'Por favor, inténtalo de nuevo',
+            icon: 'warning',
+            confirmButtonText: 'Reintentar',
+        })
+        for (var i = 0; i < resultadoCategoria.length; i++) {
+            resultadoCategoria[i].style.fontWeight = 'normal'
+        }
+    }
+    
 }

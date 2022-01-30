@@ -70,22 +70,23 @@
                             <label for="estado" class="calculo" name="estado">Clasificación:</label>
                             <input type="text" class="color" id="estado" disabled>
                         </p>
+                        <p>Clasificación IMC:</p>
+                        <ul>
+        
+                            <li class="clasificacion">Delgadez severa (< 16)</li>
+                            <li class="clasificacion">Delgadez moderada (16 - 16.9)</li>
+                            <li class="clasificacion">Delgadez aceptable (17 - 18.4)</li>
+                            <li class="clasificacion">Normal (18.5 - 24.9)</li>
+                            <li class="clasificacion">Sobrepeso (25 - 29.9)</li>
+                            <li class="clasificacion">Obesidad Grado I (30 - 34.9)</li>
+                            <li class="clasificacion">Obesidad Grado II (35 - 39)</li>
+                            <li class="clasificacion">Obesidad Grado III (> 40)</li>
+        
+                        </ul>
                     </div>
                 </div>
                 <br>
-                <p>Clasificación IMC:</p>
-                <ul>
-
-                    <li class="clasificacion">Delgadez severa (< 16)</li>
-                    <li class="clasificacion">Delgadez moderada (16 - 16.9)</li>
-                    <li class="clasificacion">Delgadez aceptable (17 - 18.4)</li>
-                    <li class="clasificacion">Normal (18.5 - 24.9)</li>
-                    <li class="clasificacion">Sobrepeso (25 - 29.9)</li>
-                    <li class="clasificacion">Obesidad Grado I (30 - 34.9)</li>
-                    <li class="clasificacion">Obesidad Grado II (35 - 39)</li>
-                    <li class="clasificacion">Obesidad Grado III (> 40)</li>
-
-                </ul>
+                
 
             </div>
 
@@ -117,7 +118,7 @@
             </div>
             <div id="menu5" class="tab-pane fade">
                 <div class="container2">
-                    <h1>INVENTARIO</h1>
+                    <h1>Stock</h1>
 
                     <p>
                         <label for="codigo">Código:</label>
@@ -139,10 +140,12 @@
                         <label for="cantidad">Cantidad:</label>
                         <input type="text" name="cantidad" id="cantidad">
                     </p>
-                   
-                    <button onclick="agregarHtml()">Añadir</button>
-                    <button onclick="editarFila()">Editar</button>
-                    <button onclick="borrarFila()">Borrar</button>
+                    
+
+
+                    <button onclick="agregarHtml();">Añadir</button>
+                    <button onclick="editarFila();">Editar</button>
+                    <button onclick="borrarFila();">Borrar</button>
 
                     <table id="tablaStock" border="1">
                         <tr>
@@ -151,7 +154,7 @@
                             <th>Ubicación</th>
                             <th>Unidad</th>
                             <th>Cantidad</th>
-                            <th>Precio</th>
+                           
                         </tr>
                         <tr>
                             <td>0497</td>
@@ -159,7 +162,7 @@
                             <td>Almacén</td>
                             <td>NordicTrack T10.0</td>
                             <td>1</td>
-                            <td>939,00€</td>
+                           
                         </tr>
                         <tr>
                             <td>0497</td>
@@ -167,7 +170,7 @@
                             <td>Almacén</td>
                             <td>Cadenza Fitness T50 Cinta de Correr Pantalla Táctil 15,6" - 22km/h</td>
                             <td>2</td>
-                            <td>899,00€</td>
+                           
                         </tr>
                         <tr>
                             <td>0497</td>
@@ -175,7 +178,7 @@
                             <td>Almacén</td>
                             <td>NordicTrack C7.5</td>
                             <td>1</td>
-                            <td>999,00€</td>
+                            
                         </tr>
                     </table>
 
