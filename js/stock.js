@@ -26,10 +26,7 @@ function comprobarInputVacio() {
     } else if (cantidad === '') {
         alert('La cantidad no puede estar vacio')
         isEmpty = true
-    } else if (precio === '') {
-        alert('El precio no puede estar vacio')
-        isEmpty = true
-    }
+    } 
     return isEmpty
 }
 

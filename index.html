@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="/css/menu1.css">
     <link rel="stylesheet" href="/css/menu2.css">
     <link rel="stylesheet" href="/css/stock.css">
@@ -115,7 +117,7 @@
             </div>
             <div id="menu5" class="tab-pane fade">
                 <div class="container2">
-                    <h1>Stock</h1>
+                    <h1>INVENTARIO</h1>
 
                     <p>
                         <label for="codigo">Código:</label>
@@ -137,15 +139,10 @@
                         <label for="cantidad">Cantidad:</label>
                         <input type="text" name="cantidad" id="cantidad">
                     </p>
-                    <p>
-                        <label for="precio">Precio:</label>
-                        <input type="text" name="precio" id="precio">
-                    </p>
-
-
-                    <button onclick="agregarHtml();">Añadir</button>
-                    <button onclick="editarFila();">Editar</button>
-                    <button onclick="borrarFila();">Borrar</button>
+                   
+                    <button onclick="agregarHtml()">Añadir</button>
+                    <button onclick="editarFila()">Editar</button>
+                    <button onclick="borrarFila()">Borrar</button>
 
                     <table id="tablaStock" border="1">
                         <tr>
@@ -203,7 +200,7 @@
         <script type="text/javascript" src="/js/calcularIMC.js"></script>
         <script type="text/javascript" src="/js/categoria.js"></script>
         <script type="text/javascript" src="/js/stock.js"></script>
-
+      
 </body>
 
 </html>

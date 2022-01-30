@@ -12,8 +12,15 @@ function calcularCategoria() {
     // console.log(edad)
 
     if (fechaNacimiento > hoy) {
-        alert('La fecha de nacimiento no puede ser superior a la fecha actual')
+        Swal.fire({
+            title: 'La fecha de nacimiento no puede ser superior a la fecha actual',
+            text: 'Por favor, inténtalo de nuevo',
+            icon: 'warning',
+            confirmButtonText: 'Reintentar',
+        })
+
     }
+    
     
     for (var i = 0; i < resultadoCategoria.length; i++) {
         resultadoCategoria[i].style.fontWeight = 'normal'
