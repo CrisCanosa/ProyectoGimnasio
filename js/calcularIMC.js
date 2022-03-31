@@ -66,9 +66,18 @@ function calcularIMC() {
             confirmButtonText: 'Reintentar',
         })
         document.getElementById('resultadoIMC').style.display = 'none'
-    } 
+    } else if (fPeso.value >= 500 ) {
+        Swal.fire({
+            title: 'No has introducido un peso válido',
+            text: 'Por favor, inténtalo de nuevo',
+            icon: 'warning',
+            confirmButtonText: 'Reintentar',
+        })
+        document.getElementById('resultadoIMC').style.display = 'none'
+    }
     
-    
+
+
 }
 
 function limpiar() {
@@ -83,5 +92,5 @@ function limpiar() {
         text: "La limpieza se ha realizado correctamente",
         icon: "success",
         confirmButtonText: 'Aceptar',
-      });
+    });
 }
