@@ -74,6 +74,14 @@ function calcularIMC() {
             confirmButtonText: 'Reintentar',
         })
         document.getElementById('resultadoIMC').style.display = 'none'
+    } else if (fAltura.value <= 44 ) {
+        Swal.fire({
+            title: 'No has introducido una altura válida',
+            text: 'Por favor, inténtalo de nuevo',
+            icon: 'warning',
+            confirmButtonText: 'Reintentar',
+        })
+        document.getElementById('resultadoIMC').style.display = 'none'
     }
     
 
